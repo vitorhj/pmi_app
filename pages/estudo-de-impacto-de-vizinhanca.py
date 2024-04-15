@@ -61,14 +61,14 @@ st.divider()
 #Printa elementos
 st.subheader('Zoneamento')
 df_insc = df_insc.loc[df_insc['inscricao'] == ib_insc]
-st.dataframe(df_insc)
+st.dataframe(df_insc, hide_index=True)
 
 st.subheader('Verificação necessidade EIV')
 zona=df_insc['nome'].unique().tolist()
 zona=''.join(zona)
 st.text(zona)
 df_eiv = df_eiv.loc[df_eiv['ZONEAMENTO'] == str(zona)]
-st.dataframe(df_eiv)
+st.dataframe(df_eiv, hide_index=True)
 
 
 
