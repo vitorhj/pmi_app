@@ -71,6 +71,7 @@ try:
     if ib_tipo != "":
       df_eiv = df_eiv.loc[df_eiv['USO/ ATIVIDADE'] == ib_tipo]
     st.dataframe(df_eiv, hide_index=True)
+    st.markdown('https://docs.google.com/spreadsheets/d/1vwx3hPDPmSIU-N1KE2iXfstt-ZH1jGQhhz0ZPNrA-vY/edit#gid=0')
 except:
     st.markdown(''':red[Verifique o correto preenchimento de todos os campos.]''')
 
