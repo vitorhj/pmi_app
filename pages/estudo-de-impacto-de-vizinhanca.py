@@ -24,6 +24,10 @@ st.sidebar.page_link("pages/links.py", label="")
 st.sidebar.page_link("pages/documentacao-complementar-ALF.py", label="")
 st.sidebar.page_link("pages/estudo-de-impacto-de-vizinhanca.py", label="")
 
+#Tabelas CSV
+
+df_inscricao-antiga=pd.read_csv("inscricao_zoneamento-antigo.csv")
+df_anexo-eiv=pd.read_csv("anexo_eiv.csv", nrows=2000)
 
 #Página principal do Streamlit - fixa
 
@@ -56,4 +60,7 @@ def clear_text():
     st.session_state["ib_zon"] = ""
 st.button("Limpar", on_click=clear_text)
 st.markdown('De acordo com a LC414/2022. Anexo I da lei considera o antigo zoneamento - LC215/2012')
-st.divider()    
+st.divider() 
+
+st.dataframe(df_inscricao)
+st.dataframe(df_anexo-eiv)
