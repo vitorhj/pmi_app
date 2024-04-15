@@ -26,8 +26,8 @@ st.sidebar.page_link("pages/estudo-de-impacto-de-vizinhanca.py", label="")
 
 #Tabelas CSV
 
-df_inscricao-antiga=pd.read_csv("inscricao_zoneamento-antigo.csv")
-df_anexo-eiv=pd.read_csv("anexo_eiv.csv", nrows=2000)
+df_insc=pd.read_csv("inscricao_zoneamento-antigo.csv")
+df_eiv=pd.read_csv("anexo_eiv.csv", nrows=2000)
 
 #Página principal do Streamlit - fixa
 
@@ -62,5 +62,5 @@ st.button("Limpar", on_click=clear_text)
 st.markdown('De acordo com a LC414/2022. Anexo I da lei considera o antigo zoneamento - LC215/2012')
 st.divider() 
 
-st.dataframe(df_inscricao)
-st.dataframe(df_anexo-eiv)
+st.dataframe(df_insc)
+st.dataframe(df_eiv)
