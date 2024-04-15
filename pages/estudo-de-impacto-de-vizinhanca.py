@@ -37,7 +37,7 @@ st.subheader('Estudo de Impacto de Vizinhança - EIV')
 col1, col2 = st.columns(2)
 
 with col1:
-    ib_zon = st.text_input(
+    ib_insc = st.text_input(
     "Inscrição Imobiliária (Padrão 000.000.00.0000)",
     key="ib_iscricao"
     )
@@ -57,10 +57,13 @@ ib_tipo = st.selectbox(
 def clear_text():
     st.session_state["ib_tipo"] = ""
     st.session_state["ib_area"] = 0
-    st.session_state["ib_zon"] = ""
+    st.session_state["ib_insc"] = ""
 st.button("Limpar", on_click=clear_text)
 st.markdown('De acordo com a LC414/2022. Anexo I da lei considera o antigo zoneamento - LC215/2012')
 st.divider() 
 
 st.dataframe(df_insc)
 st.dataframe(df_eiv)
+
+df_insc = df_insc.loc[df_insc['inscricao'] == ib_insc]
+st.dataframe(df_insc)
