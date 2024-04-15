@@ -29,3 +29,8 @@ st.sidebar.page_link("pages/lista-escritorios-virtuais.py", label="")
 
 st.image(logo_image, width=150)
 st.subheader('Lista de escritórios virtuais - ALF')
+
+#Tabelas CSV
+
+df_ev=pd.read_csv("escritorios-virtuais.csv", nrows=2000)
+st.dataframe(df_ev, hide_index=True)
