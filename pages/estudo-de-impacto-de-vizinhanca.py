@@ -62,15 +62,13 @@ st.button("Limpar", on_click=clear_text)
 st.markdown('De acordo com a LC414/2022. Anexo I da lei considera o antigo zoneamento - LC215/2012')
 st.divider() 
 
-st.dataframe(df_insc)
-st.dataframe(df_eiv)
-
 st.subheader('Zoneamento')
 df_insc = df_insc.loc[df_insc['inscricao'] == ib_insc]
 st.dataframe(df_insc)
 
 st.subheader('Verificação necessidade EIV')
 zona=df_insc['nome'].unique().tolist()
+zona=''.join(zona)
 st.text(zona)
 df_eiv = df_eiv.loc[df_eiv['ZONEAMENTO'] == str(zona)]
 st.dataframe(df_eiv)
