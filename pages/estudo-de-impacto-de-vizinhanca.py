@@ -65,5 +65,6 @@ st.divider()
 st.dataframe(df_insc)
 st.dataframe(df_eiv)
 
+st.subheader('Zoneamento')
 df_insc = df_insc.loc[df_insc['inscricao'] == ib_insc]
 st.dataframe(df_insc)
