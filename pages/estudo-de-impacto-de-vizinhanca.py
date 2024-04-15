@@ -40,7 +40,7 @@ with col1:
 
 with col2:
     ib_area = st.number_input(
-    "Área cosntruída (m²)",
+    "Área construída (m²)",
     key="ib_area"
     )
 
