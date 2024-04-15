@@ -59,18 +59,20 @@ st.markdown('De acordo com a LC414/2022. Anexo I da lei considera o antigo zonea
 st.divider() 
 
 #Printa elementos
-st.subheader('Zoneamento')
-df_insc = df_insc.loc[df_insc['inscricao'] == ib_insc]
-st.dataframe(df_insc, hide_index=True)
-
-st.subheader('Verificação necessidade EIV')
-zona=df_insc['nome'].unique().tolist()
-zona=''.join(zona)
-st.text(zona)
-df_eiv = df_eiv.loc[df_eiv['ZONEAMENTO'] == str(zona)]
-if ib_tipo != "":
-  df_eiv = df_eiv.loc[df_eiv['USO/ ATIVIDADE'] == ib_tipo]
-st.dataframe(df_eiv, hide_index=True)
-
+try:
+  if ib_insc != "":
+    st.subheader('Zoneamento')
+    df_insc = df_insc.loc[df_insc['inscricao'] == ib_insc]
+    st.dataframe(df_insc, hide_index=True)
+    st.subheader('Verificação necessidade EIV')
+    zona=df_insc['nome'].unique().tolist()
+    zona=''.join(zona)
+    st.text(zona)
+    df_eiv = df_eiv.loc[df_eiv['ZONEAMENTO'] == str(zona)]
+    if ib_tipo != "":
+      df_eiv = df_eiv.loc[df_eiv['USO/ ATIVIDADE'] == ib_tipo]
+    st.dataframe(df_eiv, hide_index=True)
+except:
+    st.markdown(''':red[Verifique o correto preenchimento de todos os campos.]''')
 
 
