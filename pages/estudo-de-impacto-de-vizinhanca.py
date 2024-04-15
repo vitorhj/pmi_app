@@ -67,7 +67,6 @@ try:
     st.subheader('Verificação necessidade EIV')
     zona=df_insc['nome'].unique().tolist()
     zona=''.join(zona)
-    st.text(zona)
     df_eiv = df_eiv.loc[df_eiv['ZONEAMENTO'] == str(zona)]
     if ib_tipo != "":
       df_eiv = df_eiv.loc[df_eiv['USO/ ATIVIDADE'] == ib_tipo]
