@@ -22,7 +22,6 @@ st.sidebar.page_link("viabilidade_empresas.py", label="")
 st.sidebar.page_link("pages/verifica_aprova.py", label="")
 st.sidebar.page_link("pages/links.py", label="")
 st.sidebar.page_link("pages/documentacao-complementar-ALF.py", label="")
-st.sidebar.page_link("pages/lista-escritorios-virtuais.py", label="")
 st.sidebar.page_link("pages/estudo-de-impacto-de-vizinhanca.py", label="")
 
 
