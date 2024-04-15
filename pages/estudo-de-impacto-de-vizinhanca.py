@@ -43,25 +43,22 @@ with col1:
     )
 
 with col2:
-    ib_area = st.number_input(
-    "Área construída (m²)",
-    key="ib_area"
-    )
+    ib_tipo = st.selectbox(
+      "Tipo de empreendimento ou Atividade",
+      ('','Residencial Multifamiliar', 'Uso Misto','Residencial Multifamiliar (Caixa da via < 8m)','Uso Misto (Caixa da via < 8m)','Residencial Multifamiliar (Caixa da via < 6m)', 'Uso Misto (Caixa da via < 6m)', 'Comércio e serviços', 'Educacional', 'Hospitais, clínicas, centros de zoonose e similares','Ginásios esportivos e estádios', 'Postos de combustível', 'Restaurantes, bares, tabacarias, casas noturnas, casa de jogos e similares','Industrial','Loteamento','Triagem, reciclagem, transbordo e aterro','Templos, igrejas, centros culturais e outros','Centro de convenções, eventos, pavilhões e feiras', 'Clubes recreativos, de lazer, esportivo e similares','Autódromo, kártódromo, hipódromo, aeródromo e similares', 'Depósito, armazéns, pátio de veículos, transportadoras e afins', 'Terminais urbanos, interurbanos de qualquer modal', 'Penitenciárias e presídios','Parques de diversão (Não itinerantes)', 'Cemitério e crematório', 'Condomínio horizontal','Estação de tratamento de água e esgoto','Portos, terminais portuários e portos secos','Estaleiros ou marinas'),
+      key="ib_cnpj"
+      )
 
-ib_tipo = st.selectbox(
-    "Tipo de empreendimento ou Atividade",
-    ('','Residencial Multifamiliar', 'Uso Misto','Residencial Multifamiliar (Caixa da via < 8m)','Uso Misto (Caixa da via < 8m)','Residencial Multifamiliar (Caixa da via < 6m)', 'Uso Misto (Caixa da via < 6m)', 'Comércio e serviços', 'Educacional', 'Hospitais, clínicas, centros de zoonose e similares','Ginásios esportivos e estádios', 'Postos de combustível', 'Restaurantes, bares, tabacarias, casas noturnas, casa de jogos e similares','Industrial','Loteamento','Triagem, reciclagem, transbordo e aterro','Templos, igrejas, centros culturais e outros','Centro de convenções, eventos, pavilhões e feiras', 'Clubes recreativos, de lazer, esportivo e similares','Autódromo, kártódromo, hipódromo, aeródromo e similares', 'Depósito, armazéns, pátio de veículos, transportadoras e afins', 'Terminais urbanos, interurbanos de qualquer modal', 'Penitenciárias e presídios','Parques de diversão (Não itinerantes)', 'Cemitério e crematório', 'Condomínio horizontal','Estação de tratamento de água e esgoto','Portos, terminais portuários e portos secos','Estaleiros ou marinas'),
-    key="ib_cnpj"
-    )
+
 
 def clear_text():
     st.session_state["ib_tipo"] = ""
-    st.session_state["ib_area"] = 0
     st.session_state["ib_insc"] = ""
 st.button("Limpar", on_click=clear_text)
 st.markdown('De acordo com a LC414/2022. Anexo I da lei considera o antigo zoneamento - LC215/2012')
 st.divider() 
 
+#Printa elementos
 st.subheader('Zoneamento')
 df_insc = df_insc.loc[df_insc['inscricao'] == ib_insc]
 st.dataframe(df_insc)
