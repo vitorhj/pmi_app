@@ -55,5 +55,5 @@ def clear_text():
     st.session_state["ib_area"] = 0
     st.session_state["ib_zon"] = ""
 st.button("Limpar", on_click=clear_text)
-
+st.markdown('De acordo com a LC414/2022. Anexo I da lei considera o antigo zoneamento - LC215/2012')
 st.divider()    
