@@ -72,8 +72,8 @@ st.dataframe(df_insc)
 st.subheader('Verificação necessidade EIV')
 zona=df_insc['nome'].unique().tolist()
 st.text(zona)
-#df_eiv = df_eiv.loc[df_eiv['ZONEAMENTO'] == zona]
-#st.dataframe(df_eiv)
+df_eiv = df_eiv.loc[df_eiv['ZONEAMENTO'] == str(zona)]
+st.dataframe(df_eiv)
 
 
 
