@@ -70,7 +70,7 @@ try:
         index_cnpj11=texto_cnpj_split2.index('BAIRRO/DISTRITO')+1
         index_cnpj12=texto_cnpj_split2.index('MUNICÍPIO')
         bairro_cnpj = " ".join(texto_cnpj_split2[index_cnpj11:index_cnpj12])
-
+        st.dataframe(df_docs)
 
 except:
     st.markdown(''':red[Verifique o correto preenchimento de todos os campos.]''')
