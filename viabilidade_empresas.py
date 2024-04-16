@@ -56,7 +56,7 @@ ib_cnpj = st.text_input(
 def clear_text():
     st.session_state["ib_cnpj"] = ""
     st.session_state["ib_area"] = 0
-    st.session_state["ib_zon"] = ""
+    st.session_state["ib_iscricao"] = ""
 st.button("Limpar", on_click=clear_text)
 
 st.divider()    
