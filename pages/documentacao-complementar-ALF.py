@@ -33,7 +33,7 @@ st.image(logo_image, width=150)
 st.subheader('Documentação complementar - ALF - Aprova Digital')
 
 ib_cnpj = st.text_input(
-    "Cole todo o texto do CNPJ",
+    "Cole todo o texto do CNPJ ou do processo do Aprova Digital",
     key="ib_cnpj"
     )
 
