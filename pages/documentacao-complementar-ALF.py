@@ -73,7 +73,8 @@ try:
 
         st.text(cnaes_cnpj)
         st.dataframe(cnaes_cnpj)
-        df_filtrado=df_docs.merge(cnaes_cnpj,left_on='codigo', right_on=0)
+        cnaes_cnpj = cnaes_cnpj.rename(columns={'value': 'codigo'})
+        df_filtrado=df_docs.merge(cnaes_cnpj,left_on='codigo', right_on='codigo')
         st.dataframe(df_filtrado)
 
 except:
