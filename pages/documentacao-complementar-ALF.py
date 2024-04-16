@@ -71,6 +71,7 @@ try:
         index_cnpj12=texto_cnpj_split2.index('MUNICÍPIO')
         bairro_cnpj = " ".join(texto_cnpj_split2[index_cnpj11:index_cnpj12])
 
+        st.text(cnaes_cnpj)
         df_docs = df_docs.loc[df_docs['codigo'] == cnaes_cnpj]
         st.dataframe(df_docs)
 
