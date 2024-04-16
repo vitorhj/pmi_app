@@ -48,28 +48,7 @@ st.button("Limpar", on_click=clear_text)
 try:
     if ib_cnpj != "":
         cnaes_cnpj = re.findall(r'\d\d.\d\d-\d-\d\d', ib_cnpj)
-        cnae_principal_cnpj=cnaes_cnpj[0]
-        numero_cnpj = re.findall(r'\d\d.\d\d\d.\d\d\d/\d\d\d\d-\d\d', ib_cnpj)
-        texto_cnpj_split = re.sub(' +', ' ',ib_cnpj).split(' ')
-        itens_analise=['EMPRESARIAL','TÍTULO', 'LOGRADOURO','NÚMERO']
-        index_cnpj1=texto_cnpj_split.index('EMPRESARIAL')+1
-        index_cnpj2=texto_cnpj_split.index('TÍTULO')
-        razao_social_cnpj = " ".join(texto_cnpj_split[index_cnpj1:index_cnpj2])
-        index_cnpj3=texto_cnpj_split.index('NATUREZA')+1
-        index_cnpj4=texto_cnpj_split.index('ESPECIAL')
-        texto_cnpj_split2 = texto_cnpj_split[index_cnpj3:index_cnpj4] #função que separa o primeiro split
-        index_cnpj5=texto_cnpj_split2.index('LOGRADOURO')+1
-        index_cnpj6=texto_cnpj_split2.index('NÚMERO')
-        logradouro_cnpj = " ".join(texto_cnpj_split2[index_cnpj5:index_cnpj6])
-        index_cnpj7=texto_cnpj_split2.index('NÚMERO')+1
-        index_cnpj8=texto_cnpj_split2.index('COMPLEMENTO')
-        numeropredial_cnpj = " ".join(texto_cnpj_split2[index_cnpj7:index_cnpj8])
-        index_cnpj9=texto_cnpj_split2.index('COMPLEMENTO')+1
-        index_cnpj10=texto_cnpj_split2.index('CEP')
-        complemento_cnpj = " ".join(texto_cnpj_split2[index_cnpj9:index_cnpj10])
-        index_cnpj11=texto_cnpj_split2.index('BAIRRO/DISTRITO')+1
-        index_cnpj12=texto_cnpj_split2.index('MUNICÍPIO')
-        bairro_cnpj = " ".join(texto_cnpj_split2[index_cnpj11:index_cnpj12])
+
 
         cnaes_cnpj=pd.DataFrame(cnaes_cnpj)
         cnaes_cnpj = cnaes_cnpj.rename(columns={'0': 'codigo'})
