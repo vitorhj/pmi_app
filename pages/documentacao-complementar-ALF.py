@@ -72,7 +72,7 @@ try:
         bairro_cnpj = " ".join(texto_cnpj_split2[index_cnpj11:index_cnpj12])
 
         st.text(cnaes_cnpj)
-        df_docs =  df_docs['codigo'].isin(cnaes_cnpj)
+        df_docs=df_docs.merge(cnaes_cnpj,left_on='codigo', right_on=0)
         st.dataframe(df_docs)
 
 except:
