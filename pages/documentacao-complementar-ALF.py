@@ -75,7 +75,7 @@ try:
         
         cnaes_cnpj=pd.DataFrame(cnaes_cnpj)
         st.dataframe(cnaes_cnpj)
-        cnaes_cnpj = cnaes_cnpj.rename(columns={'': 'codigo'})
+        cnaes_cnpj = cnaes_cnpj.rename(columns={'0': 'codigo'})
         df_filtrado=df_docs.merge(cnaes_cnpj,left_on='codigo', right_on='codigo')
         st.dataframe(df_filtrado)
 
