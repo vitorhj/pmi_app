@@ -72,8 +72,9 @@ try:
         bairro_cnpj = " ".join(texto_cnpj_split2[index_cnpj11:index_cnpj12])
 
         st.text(cnaes_cnpj)
-        df_docs=df_docs.merge(cnaes_cnpj,left_on='codigo', right_on=0)
-        st.dataframe(df_docs)
+        st.dataframe(cnaes_cnpj)
+        df_filtrado=df_docs.merge(cnaes_cnpj,left_on='codigo', right_on=0)
+        st.dataframe(df_filtrado)
 
 except:
     st.markdown(''':red[Verifique o correto preenchimento de todos os campos.]''')
