@@ -23,6 +23,9 @@ st.sidebar.page_link("pages/verifica_aprova.py", label="")
 st.sidebar.page_link("pages/links.py", label="")
 st.sidebar.page_link("pages/documentacao-complementar-ALF.py", label="")
 
+#Tabelas CSV
+
+df_docs=pd.read_csv("relacao_docs_alf.csv")
 
 #Página principal do Streamlit - fixa
 
