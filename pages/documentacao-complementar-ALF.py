@@ -71,10 +71,7 @@ try:
         index_cnpj12=texto_cnpj_split2.index('MUNICÍPIO')
         bairro_cnpj = " ".join(texto_cnpj_split2[index_cnpj11:index_cnpj12])
 
-        st.text(cnaes_cnpj)
-        
         cnaes_cnpj=pd.DataFrame(cnaes_cnpj)
-        st.dataframe(cnaes_cnpj)
         cnaes_cnpj = cnaes_cnpj.rename(columns={'0': 'codigo'})
         df_filtrado=df_docs.merge(cnaes_cnpj,left_on='codigo', right_on=0)
         st.dataframe(df_filtrado)
