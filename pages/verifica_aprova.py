@@ -21,6 +21,7 @@ logo_image = ('./images/logo.png')
 st.sidebar.page_link("viabilidade_empresas.py", label="")
 st.sidebar.page_link("pages/verifica_aprova.py", label="")
 st.sidebar.page_link("pages/links.py", label="")
+st.sidebar.page_link("pages/documentacao-complementar-ALF.py", label="")
 
 
 #Página principal do Streamlit - fixa
