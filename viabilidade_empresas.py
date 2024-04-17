@@ -10,11 +10,11 @@ from itertools import chain
 st.set_page_config(page_title='Viabilidade ALF Itajaí', 
                    layout="centered", 
                    initial_sidebar_state='expanded',
-                   page_icon=('favicon.png'), 
+                   page_icon=('./dados/favicon.png'), 
                    menu_items=None
                    )
 
-logo_image = ('logo.png')
+logo_image = ('./dados/logo.png')
 
 #Sidebar
 st.sidebar.page_link("viabilidade_empresas.py", label="")
