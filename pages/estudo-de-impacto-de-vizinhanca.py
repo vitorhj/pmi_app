@@ -27,8 +27,8 @@ st.sidebar.page_link("pages/estudo-de-impacto-de-vizinhanca.py", label="")
 
 #Tabelas CSV
 
-df_insc=pd.read_csv("inscricao_zoneamento-antigo.csv")
-df_eiv=pd.read_csv("anexo_eiv.csv", nrows=2000)
+df_insc=pd.read_csv("dados/inscricao_zoneamento-antigo.csv")
+df_eiv=pd.read_csv("dados/anexo_eiv.csv", nrows=2000)
 
 #Página principal do Streamlit - fixa
 st.image(logo_image, width=150)
