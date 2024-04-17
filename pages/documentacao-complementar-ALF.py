@@ -11,11 +11,11 @@ from itertools import chain
 st.set_page_config(page_title='Documentação complementar - ALF', 
                    layout="centered", 
                    initial_sidebar_state='expanded',
-                   page_icon=('./images/favicon.png'), 
+                   page_icon=('images/favicon.png'), 
                    menu_items=None
                    )
 
-logo_image = ('./images/logo.png')
+logo_image = ('images/logo.png')
 
 #Sidebar
 st.sidebar.page_link("viabilidade_empresas.py", label="")
