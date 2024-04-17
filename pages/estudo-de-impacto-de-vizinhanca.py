@@ -11,8 +11,11 @@ from itertools import chain
 st.set_page_config(page_title='Estudo de Impacto de vizinhança - EIV', 
                    layout="centered", 
                    initial_sidebar_state='expanded',
+                   page_icon=('images/favicon.png'), 
                    menu_items=None
                    )
+
+logo_image = ('images/logo.png')
 
 
 #Sidebar
