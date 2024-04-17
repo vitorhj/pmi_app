@@ -31,7 +31,7 @@ st.sidebar.page_link("pages/documentacao-complementar-ALF.py", label="")
 df_docs=pd.read_csv("relacao_docs_alf.csv")
 
 #Página principal do Streamlit - fixa
-
+st.image(logo_image, width=150)
 st.subheader('Documentação complementar - ALF - Aprova Digital')
 
 ib_cnpj = st.text_input(
