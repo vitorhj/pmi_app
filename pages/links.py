@@ -22,7 +22,7 @@ st.sidebar.page_link("pages/links.py", label="Links")
 
 
 #Página principal do Streamlit - fixa
-
+st.image(logo_image, width=150)
 st.subheader('Links úteis')
 st.markdown('CNPJ: '+str('https://servicos.receita.fazenda.gov.br/servicos/cnpjreva/cnpjreva_solicitacao.asp'))
 st.markdown('REGIN: '+str('http://regin.jucesc.sc.gov.br/regin.externo/CON_ViabilidadeSelecaoExternoV4.aspx?'))
