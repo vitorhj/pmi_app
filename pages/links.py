@@ -9,12 +9,10 @@ from itertools import chain
 
 st.set_page_config(page_title='Links úteis', 
                    layout="centered", 
-                   initial_sidebar_state='expanded',
-                   #page_icon=('./images/favicon.png'), 
+                   initial_sidebar_state='expanded', 
                    menu_items=None
                    )
 
-#logo_image = ('./images/logo.png')
 
 #Sidebar
 st.sidebar.page_link("viabilidade_empresas.py", label="")
@@ -24,7 +22,6 @@ st.sidebar.page_link("pages/links.py", label="")
 
 #Página principal do Streamlit - fixa
 
-#st.image(logo_image, width=150)
 st.subheader('Links úteis')
 st.markdown('CNPJ: '+str('https://servicos.receita.fazenda.gov.br/servicos/cnpjreva/cnpjreva_solicitacao.asp'))
 st.markdown('REGIN: '+str('http://regin.jucesc.sc.gov.br/regin.externo/CON_ViabilidadeSelecaoExternoV4.aspx?'))
