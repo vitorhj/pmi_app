@@ -11,8 +11,11 @@ from itertools import chain
 st.set_page_config(page_title='Documentação complementar - ALF', 
                    layout="centered", 
                    initial_sidebar_state='expanded',
+                   page_icon=('images/favicon.png'), 
                    menu_items=None
                    )
+
+logo_image = ('images/logo.png')
 
 #page_icon=('images/favicon.png'), 
 #logo_image = ('images/logo.png')
