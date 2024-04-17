@@ -18,7 +18,7 @@ st.set_page_config(page_title='Links úteis',
 #Sidebar
 st.sidebar.page_link("viabilidade_empresas.py", label="")
 st.sidebar.page_link("pages/verifica_aprova.py", label="")
-st.sidebar.page_link("pages/links.py", label="")
+st.sidebar.page_link("pages/links.py", label="Links")
 
 
 #Página principal do Streamlit - fixa
