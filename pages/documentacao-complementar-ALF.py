@@ -8,7 +8,7 @@ from itertools import chain
 
 #Configurações do Streamlit
 
-st.set_page_config(page_title='Viabilidade ALF Itajaí', 
+st.set_page_config(page_title='Documentação complementar - ALF', 
                    layout="centered", 
                    initial_sidebar_state='expanded',
                    page_icon=('./images/favicon.png'), 
