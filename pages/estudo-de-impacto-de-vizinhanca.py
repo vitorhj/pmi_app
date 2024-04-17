@@ -8,14 +8,14 @@ from itertools import chain
 
 #Configurações do Streamlit
 
-st.set_page_config(page_title='App', 
+st.set_page_config(page_title='Viabilidade ALF Itajaí', 
                    layout="centered", 
                    initial_sidebar_state='expanded',
-                   page_icon=('favicon.png'), 
+                   page_icon=('./images/favicon.png'), 
                    menu_items=None
                    )
 
-logo_image = ('logo.png')
+logo_image = ('./images/logo.png')
 
 #Sidebar
 st.sidebar.page_link("viabilidade_empresas.py", label="")
