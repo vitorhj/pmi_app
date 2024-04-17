@@ -8,14 +8,14 @@ from itertools import chain
 
 #Configurações do Streamlit
 
-st.set_page_config(page_title='Viabilidade ALF Itajaí', 
+st.set_page_config(page_title='Estudo de Impacto de vizinhança - EIV', 
                    layout="centered", 
                    initial_sidebar_state='expanded',
-                   page_icon=('./images/favicon.png'), 
+                   #page_icon=('./images/favicon.png'), 
                    menu_items=None
                    )
 
-logo_image = ('./images/logo.png')
+#logo_image = ('./images/logo.png')
 
 #Sidebar
 st.sidebar.page_link("viabilidade_empresas.py", label="")
@@ -31,7 +31,7 @@ df_eiv=pd.read_csv("anexo_eiv.csv", nrows=2000)
 
 #Página principal do Streamlit - fixa
 
-st.image(logo_image, width=150)
+#st.image(logo_image, width=150)
 st.subheader('Estudo de Impacto de Vizinhança - EIV')
 
 col1, col2 = st.columns(2)
