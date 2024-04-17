@@ -31,7 +31,7 @@ df_insc=pd.read_csv("inscricao_zoneamento-antigo.csv")
 df_eiv=pd.read_csv("anexo_eiv.csv", nrows=2000)
 
 #Página principal do Streamlit - fixa
-
+st.image(logo_image, width=150)
 st.subheader('Estudo de Impacto de Vizinhança - EIV')
 
 col1, col2 = st.columns(2)
