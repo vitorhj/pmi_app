@@ -662,10 +662,10 @@ codigo,denominacao,atestado_bombeiros,licenca_ambiental,orgão_regulador,defesa_
 45.11-1-05,Comércio por atacado de reboques e semireboques novos e usados,C - Comercial,-,-,-,-,-
 45.11-1-06,Comércio por atacado de ônibus e micro-ônibus novos e usados,C - Comercial,-,-,-,-,-
 45.12-9-02,Comércio sob consignação de veículos automotores,C - Comercial,-,-,-,-,-
-45.20-0-03,Serviços de manutenção e reparação elétrica de veículos automotores,C - Comercial,-,-,-,-,-
-45.20-0-04,Serviços de alinhamento e balanceamento de veículos automotores,C - Comercial,-,-,-,-,-
-45.20-0-07,"Serviços de instalação, manutenção e reparação de acessórios para veículos automotores",C - Comercial,-,-,-,-,-
-45.20-0-08,Serviços de capotaria,C - Comercial,-,-,-,-,-
+45.20-0-03,Serviços de manutenção e reparação elétrica de veículos automotores,G - Serviço automotivo,-,-,-,-,-
+45.20-0-04,Serviços de alinhamento e balanceamento de veículos automotores,G - Serviço automotivo,-,-,-,-,-
+45.20-0-07,"Serviços de instalação, manutenção e reparação de acessórios para veículos automotores",G - Serviço automotivo,-,-,-,-,-
+45.20-0-08,Serviços de capotaria,G - Serviço automotivo,-,-,-,-,-
 45.30-7-01,Comércio por atacado de peças e acessórios novos para veículos automotores,C - Comercial ou J - Depósitos,-,-,-,-,-
 45.30-7-03,Comércio a varejo de peças e acessórios novos para veículos automotores,C - Comercial ou J - Depósitos,-,-,-,-,-
 45.41-2-01,Comércio por atacado de motocicletas e motonetas,C - Comercial ou J - Depósitos,-,-,-,-,-
