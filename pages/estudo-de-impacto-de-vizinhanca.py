@@ -21,11 +21,12 @@ logo_image = ('images/logo.png')
 #Sidebar
 st.sidebar.image(logo_image, width=150)
 st.sidebar.divider()
-st.sidebar.page_link("app.py", label="01_Consulta de Viabilidade")
+st.sidebar.page_link("app.py", label="01_Consulta de Viabilidade (inscr.)")
 st.sidebar.page_link("pages/verifica_aprova.py", label="02_Verifica processo ALF")
 st.sidebar.page_link("pages/links.py", label="03_Links úteis")
 st.sidebar.page_link("pages/documentacao-complementar-ALF.py", label="04_Doc. complementar ALF")
 st.sidebar.page_link("pages/estudo-de-impacto-de-vizinhanca.py", label="05_EIV")
+
 
 #Tabelas CSV
 
