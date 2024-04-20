@@ -26,9 +26,9 @@ st.sidebar.page_link("pages/documentacao-complementar-ALF.py", label="04_Doc. co
 st.sidebar.page_link("pages/estudo-de-impacto-de-vizinhanca.py", label="05_EIV")
 #Tabelas CSV
 
-df_permissao=pd.read_csv("permissao.csv", nrows=2000)
-df_risco_uso=pd.read_csv("risco_uso.csv", nrows=2000)
-df_zona_col=pd.read_csv("zona_col.csv", nrows=100)
+df_permissao=pd.read_csv("dados/permissao.csv", nrows=2000)
+df_risco_uso=pd.read_csv("dados/risco_uso.csv", nrows=2000)
+df_zona_col=pd.read_csv("dados/zona_col.csv", nrows=100)
 
 #Página principal do Streamlit
 
