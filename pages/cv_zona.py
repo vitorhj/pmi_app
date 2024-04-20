@@ -31,9 +31,7 @@ df_risco_uso=pd.read_csv("dados/risco_uso.csv", nrows=2000)
 df_zona_col=pd.read_csv("dados/zona_col.csv", nrows=100)
 
 #Página principal do Streamlit
-
 st.subheader('Consulta de Viabilidade - Alvará de Funcionamento - Itajaí')
-st.divider()
 
 col1, col2 = st.columns(2)
 
