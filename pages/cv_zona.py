@@ -41,9 +41,9 @@ with col1:
     #key="ib_iscricao"
     #)
   ib_zon = st.selectbox('Insira o zoneamento',
-    ('', 'ZMC 1', 'ZMC 2', 'ZMC 3', 'ZMR', 'ZBR', 'ZBN 1', 'ZBN 2',
-    'ZCA 1', 'ZCA 2', 'ZCA 3', 'ZBS 1', 'ZBS 2', 'ZBS 3', 'ZBS 4',
-    'ZBS 5', 'ZBS 6', 'ZTU 1', 'ZTU 2', 'ZTU 3', 'ZTU 4', 'ZBP',
+    ('', 'ZMC1', 'ZMC2', 'ZMC3', 'ZMR', 'ZBR', 'ZBN1', 'ZBN2',
+    'ZCA1', 'ZCA2', 'ZCA3', 'ZBS1', 'ZBS2', 'ZBS3', 'ZBS4',
+    'ZBS5', 'ZBS6', 'ZTU1', 'ZTU2', 'ZTU3', 'ZTU4', 'ZBP',
     'ZRP1', 'ZRP2', 'ZVP', 'ZTP', 'ZDR', 'ZI', 'ZPA', 'ZP', 'ZPL')
     )
 
