@@ -3,6 +3,7 @@ import numpy as np
 import streamlit as st
 import pydeck as pdk
 import re
+from itertools import chain
 
 #Configurações do Streamlit
 
@@ -18,8 +19,7 @@ logo_image = ('./images/logo.png')
 #Sidebar
 st.sidebar.image(logo_image, width=150)
 st.sidebar.divider()
-st.sidebar.page_link("app.py", label="01_Consulta de Viabilidade (inscr.)")
-st.sidebar.page_link("pages/cv_zona.py", label="__Consulta de Viabilidade (zona)")
+st.sidebar.page_link("app.py", label="01_Consulta de Viabilidade")
 st.sidebar.page_link("pages/verifica_aprova.py", label="02_Verifica processo ALF")
 st.sidebar.page_link("pages/links.py", label="03_Links úteis")
 st.sidebar.page_link("pages/documentacao-complementar-ALF.py", label="04_Doc. complementar ALF")
@@ -84,16 +84,12 @@ try:
             id_risco='acima750.'
         
         #Filta a coluna de uso em função da área
-        if ib_area <= 150:
-            id_uso='ate150'
-        if ib_area > 150 and ib_area <= 200:
-            id_uso='150a200'
-        if ib_area > 200 and ib_area <= 500:
-            id_uso='200a500'
-        if ib_area > 500 and ib_area <= 750:
-            id_uso='500a750'
+        if ib_area <= 200:
+            id_uso='ate200'
+        if ib_area > 200 and ib_area <= 750:
+            id_uso='200a750'
         if ib_area > 750 and ib_area <= 1000:
-            id_uso='750a1000'        
+            id_uso='750a1000'     
         if ib_area > 1000:
             id_uso='acima1000'
 
