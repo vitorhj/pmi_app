@@ -85,12 +85,16 @@ try:
             id_risco='acima750.'
         
         #Filta a coluna de uso em função da área
-        if ib_area <= 200:
-            id_uso='ate200'
-        if ib_area > 200 and ib_area <= 750:
-            id_uso='200a750'
+        if ib_area <= 150:
+            id_uso='ate150'
+        if ib_area > 150 and ib_area <= 200:
+            id_uso='150a200'
+        if ib_area > 200 and ib_area <= 500:
+            id_uso='200a500'
+        if ib_area > 500 and ib_area <= 750:
+            id_uso='500a750'
         if ib_area > 750 and ib_area <= 1000:
-            id_uso='750a1000'     
+            id_uso='750a1000'
         if ib_area > 1000:
             id_uso='acima1000'
 
