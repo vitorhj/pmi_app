@@ -19,7 +19,7 @@ logo_image = ('./images/logo.png')
 #Sidebar
 st.sidebar.image(logo_image, width=150)
 st.sidebar.divider()
-st.sidebar.page_link("app.py", label="01_Consulta de Viabilidade")
+st.sidebar.page_link("app.py", label="01_Consulta de Viabilidade (inscr.)")
 st.sidebar.page_link("pages/cv_zona.py", label="__Consulta de Viabilidade (zona)")
 st.sidebar.page_link("pages/verifica_aprova.py", label="02_Verifica processo ALF")
 st.sidebar.page_link("pages/links.py", label="03_Links úteis")
