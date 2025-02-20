@@ -204,5 +204,5 @@ try:
      
 
 except:
-    st.markdown(''':red[1. Verifique se colou no campo as informações da aba 'Geral' do processo de 'Análise de Viabilidade'.]''')
-    st.markdown(''':red[2. Verifique se colou no campo as informações considerando a aba 'Atividades Exercidas']''')
+    st.markdown(''':red[1. Verifique se colou no campo as informações da aba 'GERAL' do processo de 'ANÁLISE DA VIABILIDADE'.]''')
+    st.markdown(''':red[2. Verifique se colou no campo as informações considerando a aba 'ATIVIDADES EXERCIDAS']''')
