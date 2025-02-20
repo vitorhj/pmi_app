@@ -200,4 +200,5 @@ try:
      
 
 except:
-    st.markdown(''':red[Verifique o correto preenchimento de todos os campos.]''')
+    st.markdown(''':red[1. Verifique se colou no campo as informações da aba 'Geral' do processo de 'Análise do ALVARÁ'.]''')
+    st.markdown(''':red[2. Verifique se colou no campo as informações considerando a aba 'Atividades Exercidas']''')
