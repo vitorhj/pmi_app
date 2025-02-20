@@ -25,7 +25,8 @@ st.sidebar.page_link("pages/verifica_aprova.py", label="02_Verifica processo ALF
 st.sidebar.page_link("pages/links.py", label="03_Links úteis")
 st.sidebar.page_link("pages/documentacao-complementar-ALF.py", label="04_Doc. complementar ALF")
 st.sidebar.page_link("pages/estudo-de-impacto-de-vizinhanca.py", label="05_EIV")
-st.sidebar.page_link("pages/regin.py", label='06_REGIN')
+st.sidebar.page_link("pages/regin.py", label='06_REGIN - Alvará')
+st.sidebar.page_link("pages/regin-viabilidade.py", label='07_REGIN - Viabilidade')
 #Tabelas CSV
 
 df_permissao=pd.read_csv("dados/permissao.csv", nrows=2000)
