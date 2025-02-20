@@ -153,7 +153,7 @@ try:
 
         nome_coluna = df_cnaes_risco_uso_selecionado[id_uso].name
         df_usoselect = pd.merge(df_zona_col, df_cnaes_risco_uso_selecionado[id_uso], left_on='ZONA',right_on=nome_coluna, how='inner')
-        filtro_colunas = df_usoselect['COL'].tolist()
+        filtro_colunas = df_usoselect['COL'].unique().tolist()
         filtro_colunas.insert(0,0)
         df_usoselect_filtrado = df_risco_uso.iloc[:, filtro_colunas]
         df_usoselect_filtrado = df_usoselect_filtrado.loc[df_usoselect_filtrado['ZONA'] == zon_regin]
@@ -188,19 +188,9 @@ try:
         #Permissão de uso
         st.subheader('Permisão de uso')
         st.markdown('Zoneamento: '+zon_regin)
-        st.markdown('Classificação de uso: '+class_uso)        
-
-
-        #st.markdown(texto_regin_split)
-        #st.dataframe(df_cad_imob)
-        #st.text(logr_num_regin)     
-        #st.dataframe(df_filtrado)
-
+        st.markdown('Classificação de uso: '+class_uso)     
         st.dataframe(df_usoselect_filtrado, hide_index=True) 
-        #t.dataframe(df_filtro_permissao)
-        #st.dataframe(df_risco_uso)
-        #st.dataframe(df_zona_col)
-        
+     
 
 except:
     st.markdown(''':red[Verifique o correto preenchimento de todos os campos.]''')
