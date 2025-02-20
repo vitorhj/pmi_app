@@ -171,10 +171,15 @@ try:
         st.markdown('Razão Social: '+razao_social_regin)
         st.markdown('CNPJ: '+cnpj_regin[0])
         st.markdown('Área construída: '+str(area_construida_regin)+' m²')
+        st.markdown('Google maps: '+str('https://www.google.com/maps/place/')+':+'+logradouro_gmaps+'+'+str(numero_predial_regin)+str('+,+Itaja%C3%AD+-+SC'))
+
+        st.divider()
 
         #Análise de risco
         st.subheader('Classificação de risco e uso das atividades')
         st.dataframe(df_cnaes_risco_uso_selecionado, hide_index=True)
+
+        st.divider()
 
         #Localização
         st.subheader('Localização')
@@ -183,8 +188,8 @@ try:
         st.markdown('Inscrição Imobiliária:'+' '+inscr_regin)
         st.markdown('Consulta prévia:  https://arcgis.itajai.sc.gov.br/geoitajai/plantacadastral/consultaprevia.html#i'+inscr_arcgis)
         st.markdown('Planta de situação: https://arcgis.itajai.sc.gov.br/geoitajai/plantacadastral/plantalocalizacao.html#i'+inscr_arcgis)
-        st.markdown('Google maps: '+str('https://www.google.com/maps/place/')+':+'+logradouro_gmaps+'+'+str(numero_predial_regin)+str('+,+Itaja%C3%AD+-+SC'))
-
+        
+        st.divider()
 
         #Permissão de uso
         st.subheader('Permisão de uso')
