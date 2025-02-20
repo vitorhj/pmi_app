@@ -83,6 +83,7 @@ try:
         numero_predial_regin = " ".join(texto_regin_split[index_regin5-1:index_regin5])
         numero_predial_regin = numero_predial_regin.replace("Nº", "")
         logr_num_regin = logradouro_regin+' '+numero_predial_regin
+        logradouro_gmaps = logradouro_regin.replace(' ','+')
 
         #______________________________________________________________________________________________#
 
@@ -182,7 +183,7 @@ try:
         st.markdown('Inscrição Imobiliária:'+' '+inscr_regin)
         st.markdown('Consulta prévia:  https://arcgis.itajai.sc.gov.br/geoitajai/plantacadastral/consultaprevia.html#i'+inscr_arcgis)
         st.markdown('Planta de situação: https://arcgis.itajai.sc.gov.br/geoitajai/plantacadastral/plantalocalizacao.html#i'+inscr_arcgis)
-        #st.markdown('Google maps: '+str('https://www.google.com/maps/place/')+logradouro_regin+str(numero_predial_regin)+str('+Itajai+-+SC'))
+        st.markdown('Google maps: '+str('https://www.google.com/maps/place/')+':+'+logradouro_gmaps+'+'+str(numero_predial_regin)+str('+,+Itaja%C3%AD+-+SC'))
 
 
         #Permissão de uso
