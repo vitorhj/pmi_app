@@ -886,7 +886,7 @@ codigo,codigo-regin,divisao,denominacao,ate150.,150a500.,500a750.,acima750.,ate1
 87.20-4-01,87.20-4/01,"ATIVIDADES DE ATENÇÃO À SAÚDE HUMANA INTEGRADAS COM ASSISTÊNCIA SOCIAL, PRESTADAS EM RESIDÊNCIAS COLETIVAS E PARTICULARES",Atividades de centros de assistência psicossocial,Baixo,Baixo,Baixo,Alto,CS1,CS1,CS2,CS2,CS_750_1000,CS3
 87.20-4-99,87.20-4/99,"ATIVIDADES DE ATENÇÃO À SAÚDE HUMANA INTEGRADAS COM ASSISTÊNCIA SOCIAL, PRESTADAS EM RESIDÊNCIAS COLETIVAS E PARTICULARES","Atividades de assistência psicossocial e à saúde a portadores de distúrbios psíquicos, deficiência mental e dependência química e grupos similares não especificadas anteriormente",Baixo,Baixo,Baixo,Alto,CS1,CS1,CS2,CS2,CS_750_1000,CS3
 88.00-6-00,88.00-6/00,SERVIÇOS DE ASSISTÊNCIA SOCIAL SEM ALOJAMENTO,Serviços de assistência social sem alojamento,Baixo,Baixo,Baixo,Alto,CS1,CS1,CS2,CS2,CS_750_1000,CS3
-90.01-9-01,90.01-9/01,"ATIVIDADES ARTÍSTICAS, CRIATIVAS E DE ESPETÁCULOS",Produção teatral,Baixo,Baixo,Baixo,Alto,CSE,CSE,CSE,CSE,CSE,CSE
+90.01-9-01,90.01-9/01,"ATIVIDADES ARTÍSTICAS, CRIATIVAS E DE ESPETÁCULOS",Produção teatral,Alto,Alto,Alto,Alto,CSE,CSE,CSE,CSE,CSE,CSE
 90.01-9-02,90.01-9/02,"ATIVIDADES ARTÍSTICAS, CRIATIVAS E DE ESPETÁCULOS",Produção musical,Baixo,Baixo,Baixo,Alto,CS1,CS1,CS2,CS2,CS_750_1000,CS3
 90.01-9-03,90.01-9/03,"ATIVIDADES ARTÍSTICAS, CRIATIVAS E DE ESPETÁCULOS",Produção de espetáculos de dança,Baixo,Baixo,Baixo,Alto,CS1,CS1,CS2,CS2,CS_750_1000,CS3
 90.01-9-04,90.01-9/04,"ATIVIDADES ARTÍSTICAS, CRIATIVAS E DE ESPETÁCULOS","Produção de espetáculos circenses, de marionetes e similares",Baixo,Baixo,Baixo,Alto,CS1,CS1,CS2,CS2,CS_750_1000,CS3
@@ -903,7 +903,7 @@ codigo,codigo-regin,divisao,denominacao,ate150.,150a500.,500a750.,acima750.,ate1
 92.00-3-01,92.00-3/01,ATIVIDADES DE EXPLORAÇÃO DE JOGOS DE AZAR E APOSTAS,Casas de bingo,Alto,Alto,Alto,Alto,CS1,CS1,CS2,CS2,CS_750_1000,CS3
 92.00-3-02,92.00-3/02,ATIVIDADES DE EXPLORAÇÃO DE JOGOS DE AZAR E APOSTAS,Exploração de apostas em corridas de cavalos,Alto,Alto,Alto,Alto,CS1,CS1,CS2,CS2,CS_750_1000,CS3
 92.00-3-99,92.00-3/99,ATIVIDADES DE EXPLORAÇÃO DE JOGOS DE AZAR E APOSTAS,Exploração de jogos de azar e apostas não especificados anteriormente,Alto,Alto,Alto,Alto,CS1,CS1,CS2,CS2,CS_750_1000,CS3
-93.11-5-00,93.11-5/00,ATIVIDADES ESPORTIVAS E DE RECREAÇÃO E LAZER,Gestão de instalações de esportes,Baixo,Alto,Alto,Alto,CSE,CSE,CSE,CSE,CSE,CSE
+93.11-5-00,93.11-5/00,ATIVIDADES ESPORTIVAS E DE RECREAÇÃO E LAZER,Gestão de instalações de esportes,Alto,Alto,Alto,Alto,CSE,CSE,CSE,CSE,CSE,CSE
 93.13-1-00,93.13-1/00,ATIVIDADES ESPORTIVAS E DE RECREAÇÃO E LAZER,Atividades de condicionamento físico,Baixo,Alto,Alto,Alto,CS1,CS1,CS2,CS2,CS2,CS3
 93.19-1-01,93.19-1/01,ATIVIDADES ESPORTIVAS E DE RECREAÇÃO E LAZER,Produção e promoção de eventos esportivos,Baixo,Baixo,Médio,Alto,CS1,CS1,CS2,CS2,CS2,CS3
 93.19-1-99,93.19-1/99,ATIVIDADES ESPORTIVAS E DE RECREAÇÃO E LAZER,Outras atividades esportivas não especificadas anteriormente,Baixo,Baixo,Médio,Alto,CS1,CS1,CS2,CS2,CS2,CS3
