@@ -86,9 +86,9 @@ try:
         logradouro_gmaps = logradouro_regin.replace(' ','+')
 
         if area_construida_regin == 'Tipo':
-          area_construida_regin = 0 
+            area_construida_regin = 0 
         else:
-          area_construida_regin = area_construida_regin
+            area_construida_regin = area_construida_regin
 
         #______________________________________________________________________________________________#
 
