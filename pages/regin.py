@@ -76,7 +76,6 @@ try:
         index_regin6=texto_regin_split.index('Bairro:')
         index_regin7=texto_regin_split.index('Município:')
 
-
         razao_social_regin = " ".join(texto_regin_split[index_regin1+1:index_regin4-1])
         area_construida_regin = " ".join(texto_regin_split[index_regin3+1:index_regin3+2])
         logradouro_regin = " ". join(texto_regin_split[index_regin2+2:index_regin5-1])
@@ -85,6 +84,11 @@ try:
         numero_predial_regin = numero_predial_regin.replace("Nº", "")
         logr_num_regin = logradouro_regin+' '+numero_predial_regin
         logradouro_gmaps = logradouro_regin.replace(' ','+')
+
+        if area_construida_regin == 'Tipo':
+          area_construida_regin = 0 
+        else:
+          area_construida_regin = area_construida_regin
 
         #______________________________________________________________________________________________#
 
