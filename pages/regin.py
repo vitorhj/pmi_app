@@ -33,7 +33,7 @@ st.sidebar.page_link("pages/regin-viabilidade.py", label='07_REGIN - Viabilidade
 
 
 #Página principal do Streamlit - fixa
-st.subheader('Verifica REGIN')
+st.subheader('Verifica REGIN - Alvará e Legalização')
 
 ib_regin= st.text_input(
     "Cole todo o texto da página do REGIN",
