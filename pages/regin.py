@@ -57,6 +57,7 @@ df_zona_col=pd.read_csv("dados/zona_col.csv", nrows=100)
 df_inscricao=pd.read_csv("dados/inscricao.csv")
 
 
+
 #______________________________________________________________________________________________#
 
 
@@ -67,7 +68,8 @@ try:
         texto_regin_split = re.sub(' +', ' ',ib_regin).split(' ')
         cnaes_regin = re.findall(r'\d\d.\d\d-\d/\d\d', ib_regin)
         cnpj_regin = re.findall(r'\d\d.\d\d\d.\d\d\d/\d\d\d\d-\d\d', ib_regin)
-        
+
+       
         index_regin1=texto_regin_split.index('Empresarial:')
         index_regin2=texto_regin_split.index('Logradouro:')
         index_regin3=texto_regin_split.index('Construída(m2):')
@@ -75,6 +77,7 @@ try:
         index_regin5=texto_regin_split.index('Complemento:')
         index_regin6=texto_regin_split.index('Bairro:')
         index_regin7=texto_regin_split.index('Município:')
+
 
         razao_social_regin = " ".join(texto_regin_split[index_regin1+1:index_regin4-1])
         area_construida_regin = " ".join(texto_regin_split[index_regin3+1:index_regin3+2])
@@ -84,6 +87,7 @@ try:
         numero_predial_regin = numero_predial_regin.replace("Nº", "")
         logr_num_regin = logradouro_regin+' '+numero_predial_regin
         logradouro_gmaps = logradouro_regin.replace(' ','+')
+        complemento_regin = " ".join(texto_regin_split[index_regin5+1:index_regin5+2])
 
         if area_construida_regin == 'Tipo':
             area_construida_regin = 0 
@@ -96,16 +100,22 @@ try:
         df_filtrado = df_cad_imob.loc[df_cad_imob['logr_numpredial'] == logr_num_regin, ['Insc. Red', 'logr_numpredial']]
         df_filtrado1 = df_cad_imob.loc[df_cad_imob['logr_numpredial'] == logr_num_regin, ['Insc. Red']]
         inscr_regin = df_filtrado1['Insc. Red'].unique()
-        inscr_regin = inscr_regin[0]
-        inscr_arcgis = inscr_regin.replace('.', '')
 
+        try:
+            inscr_regin = inscr_regin[0]
+            inscr_arcgis = inscr_regin.replace('.', '')
+        except:
+            st.markdown(''':red[O endereço não está cadastrado na base de dados do programa. Não será realizada a consulta de permissão de uso.]''')
+            inscr_regin = '000.000.00.00000'
+            inscr_arcgis = '000.000.00.00000'
+        
         #______________________________________________________________________________________________#
 
         #Procura o zoneamento a partir da inscrição
-        df_filtro_zoneamento = df_inscricao.loc[df_inscricao['inscricao'] == inscr_regin, ['zon_alv']]
-        zon_regin = df_filtro_zoneamento['zon_alv'].unique()
-        zon_regin = zon_regin[0]
-
+        if inscr_regin is not '000.000.00.00000':
+            df_filtro_zoneamento = df_inscricao.loc[df_inscricao['inscricao'] == inscr_regin, ['zon_alv']]
+            zon_regin = df_filtro_zoneamento['zon_alv'].unique()
+            zon_regin = zon_regin[0]
         #______________________________________________________________________________________________#
 
         #Tabela de cnaes, risco e classificação de uso
@@ -143,11 +153,13 @@ try:
         #______________________________________________________________________________________________#
 
         #Procura a permissão pelo zoneamento
-        df_filtro_permissao = df_risco_uso.loc[df_risco_uso['ZONA']==zon_regin]
+        if inscr_regin is not '000.000.00.00000':
+            df_filtro_permissao = df_risco_uso.loc[df_risco_uso['ZONA']==zon_regin]
 
         #______________________________________________________________________________________________#
 
         #Filtra os usos com base na área
+        
         df_class_uso = df_cnaes_risco_uso_selecionado[id_uso]
         class_uso = df_cnaes_risco_uso_selecionado[id_uso].unique().tolist()
         class_uso=''.join(class_uso)
@@ -157,12 +169,13 @@ try:
 
         #Filtra a tabela de zoneamento e uso
 
-        nome_coluna = df_cnaes_risco_uso_selecionado[id_uso].name
-        df_usoselect = pd.merge(df_zona_col, df_cnaes_risco_uso_selecionado[id_uso], left_on='ZONA',right_on=nome_coluna, how='inner')
-        filtro_colunas = df_usoselect['COL'].unique().tolist()
-        filtro_colunas.insert(0,0)
-        df_usoselect_filtrado = df_risco_uso.iloc[:, filtro_colunas]
-        df_usoselect_filtrado = df_usoselect_filtrado.loc[df_usoselect_filtrado['ZONA'] == zon_regin]
+        if inscr_regin is not '000.000.00.00000':
+            nome_coluna = df_cnaes_risco_uso_selecionado[id_uso].name
+            df_usoselect = pd.merge(df_zona_col, df_cnaes_risco_uso_selecionado[id_uso], left_on='ZONA',right_on=nome_coluna, how='inner')
+            filtro_colunas = df_usoselect['COL'].unique().tolist()
+            filtro_colunas.insert(0,0)
+            df_usoselect_filtrado = df_risco_uso.iloc[:, filtro_colunas]
+            df_usoselect_filtrado = df_usoselect_filtrado.loc[df_usoselect_filtrado['ZONA'] == zon_regin]
         
      
 
@@ -173,10 +186,13 @@ try:
         #Resumo do processo
         st.divider()
         st.subheader('Resumo do processo')
-        st.markdown('Razão Social: '+razao_social_regin)
-        st.markdown('CNPJ: '+cnpj_regin[0])
+        st.markdown('Razão Social: '+razao_social_regin+', CNPJ: '+cnpj_regin[0])
+        st.markdown('Endereço no REGIN: '+logradouro_regin+' '+numero_predial_regin+', '+bairro_regin+' '+complemento_regin)
+        st.markdown('Inscrição Imobiliária:'+' '+inscr_regin)
         st.markdown('Área construída: '+str(area_construida_regin)+' m²')
         st.markdown('Google maps: '+str('https://www.google.com/maps/place/')+':+'+logradouro_gmaps+'+'+str(numero_predial_regin)+str('+,+Itaja%C3%AD+-+SC'))
+        st.markdown('Consulta prévia:  https://arcgis.itajai.sc.gov.br/geoitajai/plantacadastral/consultaprevia.html#i'+inscr_arcgis)
+        #st.markdown('Planta de situação: https://arcgis.itajai.sc.gov.br/geoitajai/plantacadastral/plantalocalizacao.html#i'+inscr_arcgis)
 
         st.divider()
 
@@ -184,25 +200,18 @@ try:
         st.subheader('Classificação de risco e uso das atividades')
         st.dataframe(df_cnaes_risco_uso_selecionado, hide_index=True)
 
-        st.divider()
+        if inscr_regin is not '000.000.00.00000':
+    
+            st.divider()
 
-        #Localização
-        st.subheader('Localização')
-        st.markdown('Endereço no REGIN: '+logradouro_regin+' '+numero_predial_regin+', '+bairro_regin)
-        st.markdown('Complemento no REGIN: ')
-        st.markdown('Inscrição Imobiliária:'+' '+inscr_regin)
-        st.markdown('Consulta prévia:  https://arcgis.itajai.sc.gov.br/geoitajai/plantacadastral/consultaprevia.html#i'+inscr_arcgis)
-        st.markdown('Planta de situação: https://arcgis.itajai.sc.gov.br/geoitajai/plantacadastral/plantalocalizacao.html#i'+inscr_arcgis)
-        
-        st.divider()
-
-        #Permissão de uso
-        st.subheader('Permisão de uso')
-        st.markdown('Zoneamento: '+zon_regin)
-        st.markdown('Classificação de uso: '+class_uso)     
-        st.dataframe(df_usoselect_filtrado, hide_index=True) 
+            #Permissão de uso
+            st.subheader('Permisão de uso')
+            st.markdown('Zoneamento: '+zon_regin)
+            st.markdown('Classificação de uso: '+class_uso)     
+            st.dataframe(df_usoselect_filtrado, hide_index=True) 
      
 
 except:
     st.markdown(''':red[1. Verifique se colou no campo as informações da aba 'Geral' do processo de 'Análise do ALVARÁ'.]''')
     st.markdown(''':red[2. Verifique se colou no campo as informações considerando a aba 'Atividades Exercidas']''')
+    #st.markdown(''':red[Não foi localizada a inscrição imobiliária pelo logradouro e número informados no protocolo na base de dados do programa. Insira manualmente a incrição reduzida acima.]''')
