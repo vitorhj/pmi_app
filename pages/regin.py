@@ -30,10 +30,11 @@ st.sidebar.page_link("pages/documentacao-complementar-ALF.py", label="04_Doc. co
 st.sidebar.page_link("pages/estudo-de-impacto-de-vizinhanca.py", label="05_EIV")
 st.sidebar.page_link("pages/regin.py", label='06_REGIN - Alvará')
 st.sidebar.page_link("pages/regin-viabilidade.py", label='07_REGIN - Viabilidade')
+st.sidebar.page_link("pages/risco_regin.py", label='08_REGIN - Classificação de riscoViabilidade')
 
 
 #Página principal do Streamlit - fixa
-st.subheader('Verifica REGIN - Alvará e Legalização')
+st.subheader('Verifica REGIN')
 
 ib_regin= st.text_input(
     "Cole todo o texto da página do REGIN",
