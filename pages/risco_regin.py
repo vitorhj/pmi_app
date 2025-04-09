@@ -131,5 +131,5 @@ try:
         st.divider()
 
 except:
-    st.markdown(''':red[1. Verifique se colou no campo as informações da aba 'GERAL' do processo de 'ANÁLISE DA VIABILIDADE'.]''')
+    st.markdown(''':red[1. Verifique se colou no campo as informações da aba 'GERAL'.]''')
     st.markdown(''':red[2. Verifique se colou no campo as informações considerando a aba 'ATIVIDADES EXERCIDAS']''')
