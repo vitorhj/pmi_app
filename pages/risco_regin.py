@@ -34,7 +34,7 @@ st.sidebar.page_link("pages/risco_regin.py", label='08_REGIN - Classificação d
 
 
 #Página principal do Streamlit - fixa
-st.subheader('Verifica REGIN')
+st.subheader('Classificação de risco e uso REGIN - Empresas e MEI')
 
 ib_regin= st.text_input(
     "Cole todo o texto da página do REGIN",
